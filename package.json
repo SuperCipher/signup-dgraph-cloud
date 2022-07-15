@@ -1,0 +1,23 @@
+{
+  "name": "signup-dgraph-cloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "spectaql config.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperCipher/signup-dgraph-cloud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuperCipher/signup-dgraph-cloud/issues"
+  },
+  "homepage": "https://github.com/SuperCipher/signup-dgraph-cloud#readme",
+  "devDependencies": {
+    "spectaql": "^1.4.1"
+  }
+}
