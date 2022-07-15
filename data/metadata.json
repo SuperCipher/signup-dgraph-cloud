@@ -1,0 +1,15 @@
+{
+  "OBJECT": {
+    "Query": {
+      "fields": {
+        "queryUser": {
+          "args": {
+            "nonReqQueryArg": {
+              "documentation": { "example": "Metadata example of `nonReqQueryArg`" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

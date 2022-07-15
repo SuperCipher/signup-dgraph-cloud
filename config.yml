@@ -1,0 +1,22 @@
+spectaql:
+  logoFile: logo.png
+
+introspection:
+  url: 'https://green-feather-500032.ap-south-1.aws.cloud.dgraph.io/graphql'
+  # TODO add more description in graphql introspection
+  # metadataFile: ./data/metadata.json
+  # headers:
+  #   Authorization: 'apikey {{apikey}}'
+
+info:
+  title: band-protocol-backend-assignment GraphQL document
+  description:
+    GraphQL specification documentation
+    please look at the /#query-queryUser and /#mutation-addUser for more
+    detailed description or connect to https://green-feather-500032.ap-south-1.aws.cloud.dgraph.io/graphql
+    with graphql playground of your choice e.g. https://graphiql-online.com/graphiql
+
+servers:
+  - url: 'https://green-feather-500032.ap-south-1.aws.cloud.dgraph.io/graphql'
+    description: Production
+    production: true
