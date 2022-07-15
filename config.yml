@@ -7,6 +7,7 @@ introspection:
   # metadataFile: ./data/metadata.json
   # headers:
   #   Authorization: 'apikey {{apikey}}'
+  fieldExpansionDepth: 3
 
 info:
   title: band-protocol-backend-assignment GraphQL document
