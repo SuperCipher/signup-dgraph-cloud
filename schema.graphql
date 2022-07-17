@@ -2,7 +2,7 @@
 # Input Schema
 #######################
 
-type User @secret(field: "password") {
+type User @lambdaOnMutate(add: true, update: true) @secret(field: "password") {
 	id: ID!
 	username: String! @id @search(by: [hash])
 	profile_image_hash: String! @id @search(by: [hash])
@@ -462,6 +462,7 @@ type Query {
 #######################
 
 type Mutation {
+	newUser(username: String!, password: String!, profile_image_hash: String!, domain: String!, path: String!): ID! @lambda
 	addUser(input: [AddUserInput!]!, upsert: Boolean): AddUserPayload
 	updateUser(input: UpdateUserInput!): UpdateUserPayload
 	deleteUser(filter: UserFilter!): DeleteUserPayload
