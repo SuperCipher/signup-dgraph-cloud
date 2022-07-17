@@ -1,9 +1,5 @@
 // You can type/paste your script here
 
-const domainResolver = () => `api.lorem.space`
-
-const pathResolver = () => `image/face`
-
 async function newUserResolver({args, graphql}) {
     // lets give every new author a reputation of 3 by default
     const results = await graphql(`mutation MyMutation {
@@ -20,7 +16,6 @@ async function newUserResolver({args, graphql}) {
 }
 
 self.addGraphQLResolvers({
-  "ImageObjectStorage.domain": domainResolver,
   "Mutation.newUser": newUserResolver
 })
 
@@ -29,8 +24,16 @@ self.addGraphQLResolvers({
 async function addUserWebhook({event, dql, graphql, authHeader}) {
     // execute what you want on addition of an user
     // maybe send a welcome mail to the user
+    const results = await graphql(`mutation addUserWebhookMutation {
+      addUser(input: ${event.add.input}) {
+        user {
+          id
+        }
+      }
+    }`)
     console.log(JSON.stringify(event));
     console.log(JSON.stringify(event.add.input ));
+    console.log(JSON.stringify(results));
 
     console.log("-----------------------------------");
 
